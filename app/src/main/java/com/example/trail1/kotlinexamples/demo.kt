@@ -1,27 +1,21 @@
 package com.example.trail1.kotlinexamples
 
 fun main() {
-    val numberOfFish = 50
-    val numberOfPlants = 23
-    if (numberOfFish > numberOfPlants) {
-        println("Good ratio!")
-    } else {
-        println("Unhealthy ratio")
-    }
-    val fish = 50
-    if (fish in 1..100) {
-        println(fish)
-    }
-    if (numberOfFish == 0) {
-        println("Empty tank")
-    } else if (numberOfFish < 40) {
-        println("Got fish!")
-    } else {
-        println("That's a lot of fish!")
-    }
-    when (numberOfFish) {
-        0  -> println("Empty tank")
-        in 1..39 -> println("Got fish!")
-        else -> println("That's a lot of fish!")
-    }
+
+    for (i in 1..5) print(i)
+    printHello(name = "hello")
+    drive(speed = "slow")
+    tempToday("mon",32)
+}
+
+fun printHello(name: String?){
+    println("hi hello")
+}
+
+fun drive(speed: String = "fast") {
+    println("driving $speed")
+}
+
+fun tempToday(day: String, temp: Int) {
+    println("Today is $day and it's $temp degrees.")
 }
