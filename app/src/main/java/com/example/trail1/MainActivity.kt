@@ -28,7 +28,11 @@ class MainActivity : AppCompatActivity() {
        // var dialIntent:Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:987654398765"))
        // var webIntent :Intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://www.google.com"))
        // startActivity(webIntent)
-        startTimer(message = "motor", seconds = 3)
+       // startTimer(message = "motor", seconds = 3)
+
+        var hIntent = Intent(this,HomeActivity::class.java)
+        startActivity(hIntent)
+
     }
 
 
