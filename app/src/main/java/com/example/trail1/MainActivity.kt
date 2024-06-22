@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
        // startTimer(message = "motor", seconds = 3)
 
         var hIntent = Intent(this,HomeActivity::class.java)
+        hIntent.putExtra("nkey","sathvik-android")
         startActivity(hIntent)
 
     }
