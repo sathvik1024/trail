@@ -56,6 +56,8 @@ class MainActivity : AppCompatActivity() {
 
         var hIntent = Intent(this,HomeActivity::class.java)
         hIntent.putExtra("nkey","sathvik-android")
+        throw NullPointerException("demo vit exception")
+        //after clicking on the button app crashes
         startActivity(hIntent)
 
     }
