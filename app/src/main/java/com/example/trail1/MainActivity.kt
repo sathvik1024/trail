@@ -49,6 +49,8 @@ class MainActivity : AppCompatActivity() {
 
     fun myClickHandler(view: View) {
         Log.i("MainActivity","Button clicked")
+        var c =10+20
+        add(10,20)
        // var dialIntent:Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:987654398765"))
        // var webIntent :Intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://www.google.com"))
        // startActivity(webIntent)
@@ -56,10 +58,28 @@ class MainActivity : AppCompatActivity() {
 
         var hIntent = Intent(this,HomeActivity::class.java)
         hIntent.putExtra("nkey","sathvik-android")
-        throw NullPointerException("demo vit exception")
+       // throw NullPointerException("demo vit exception")
         //after clicking on the button app crashes
         startActivity(hIntent)
 
+    }
+
+    private fun add(i: Int, i1: Int):Int {
+        var c = 20
+        var d = 20 * i
+        mul(5,4)
+        return i +i1
+
+    }
+
+    private fun mul(i: Int, i1: Int) {
+        val d = i * i1
+        div(6,3)
+
+    }
+
+    private fun div(i: Int, i1: Int) {
+        add(10,20)
     }
 
 
