@@ -11,20 +11,22 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.RecyclerView
+
 
 class HomeActivity : AppCompatActivity() {
-    class HomeActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener,
-        AdapterView.OnItemClickListener {
+    class HomeActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
+        var data = arrayOf("india","hindi","australia","peacock","blue")
         var TAG = HomeActivity::class.java.simpleName    //"HomeActivity"
         lateinit var mySpinner: Spinner
-        lateinit var myListview: ListView
+        lateinit var myRecycler: RecyclerView
+
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             enableEdgeToEdge()
             setContentView(R.layout.activity_home)
             mySpinner = findViewById(R.id.spinner) //taking handle
-            myListview = findViewById(R.id.listView)
-            myListview.isClickable = true
+            myRecycler = findViewById(R.id.recyclerView)
 
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
                 val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -33,7 +35,6 @@ class HomeActivity : AppCompatActivity() {
             }
 
             mySpinner.onItemSelectedListener = this
-            myListview.setOnItemClickListener(this)
             //get intent which sttarted this activity
             //get the extras from that intent
             //get the string with mykey
@@ -60,9 +61,6 @@ class HomeActivity : AppCompatActivity() {
             TODO("Not yet implemented")
         }
 
-        override fun onItemClick(adpater: AdapterView<*>?, view: View?, position: Int, id: Long) {
-            var item: String = adpater?.getItemAtPosition(position).toString()
-            Log.i(TAG, item)
-        }
+
     }
 }
