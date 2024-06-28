@@ -2,6 +2,7 @@ package com.example.trail1.kotlinexamples
 
 fun main() {
 
+    val s = Square(10)
     for (i in 1..5) print(i)
     printHello(name = "hello")
     drive(speed = "slow")
@@ -25,4 +26,10 @@ fun tempToday(day: String, temp: Int) {
 fun String.commaSeperated( values:String):String{
     return  "comma seperated string --"+ values
 
+}
+
+class Square(val side: Int) {
+    init {
+        println(side * 2)
+    }
 }
