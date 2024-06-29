@@ -5,16 +5,17 @@ import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Spinner
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
-class HomeActivity : AppCompatActivity() {
-    class HomeActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
+class HomeActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
         var dataArray = arrayOf("india","hindi","australia","peacock","blue")
         var TAG = HomeActivity::class.java.simpleName    //"HomeActivity"
         lateinit var mySpinner: Spinner
@@ -63,6 +64,10 @@ class HomeActivity : AppCompatActivity() {
             TODO("Not yet implemented")
         }
 
-
+    fun getShowText(view: View) {
+        var etUi:EditText = findViewById(R.id.etUItest)
+        var text = etUi.text.toString()
+        var tvUi:TextView = findViewById(R.id.tvUI)
+        tvUi.setText(text)
     }
 }
