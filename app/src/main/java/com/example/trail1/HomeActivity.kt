@@ -70,4 +70,19 @@ class HomeActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
         var tvUi:TextView = findViewById(R.id.tvUI)
         tvUi.setText(text)
     }
+    fun downloadImage(){
+        //let there be 50 inst
+        //first 10 automatically runs
+        //11-20 - is from internet/ db/ image processing
+    }
+    //http://openweathermap.com/getweather/city=bangalore
+
+    fun getWeather(cityName:String):String{
+        return  "{ temp:32, windspeed:40,}"
+    }
+    //http://openweathermap.com/getTemp/city=bangalore
+
+    fun getTemp(city:String):Int{
+        return 25
+    }
 }
